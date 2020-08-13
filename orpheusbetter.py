@@ -279,12 +279,12 @@ def main():
             # may be fixable when the tags are copied.
             broken_tags = False
             for flac_file in transcode.locate(flac_dir, transcode.ext_matcher('.flac')):
-                (ok, msg) = tagging.check_tags(flac_file, check_tracknumber_format=False)
-                if not ok:
-                    print("A FLAC file in this release has unacceptable tags - skipping: {0}".format(msg))
-                    print("You might be able to trump it.")
-                    broken_tags = True
-                    break
+                # (ok, msg) = tagging.check_tags(flac_file, check_tracknumber_format=False)
+                # if not ok:
+                #     print("A FLAC file in this release has unacceptable tags - skipping: {0}".format(msg))
+                #     print("You might be able to trump it.")
+                #     broken_tags = True
+                #     break
             if broken_tags:
                 continue
 
